@@ -1,0 +1,91 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Assignment5-quiz.css">
+</head>
+<body>
+    <div class="main-div">
+        <h1>SOLVE SIMPLE QUIZ</h1>
+    <form name="MCQ" id="quiz-m">
+    <div class="text-box">
+        <p id="p-1">Q.1 What year did the Titanic sink in the Atlantic Ocean on 15 April, on its maiden voyage from Southampton?</p>
+        <p><input type="radio" name="question1" value="Year 1990.">Year 1990.</p>
+        <p><input type="radio" name="question1" value="Year 1912.">Year 1912.</p>
+        <p><input type="radio" name="question1" value="Year 1990.">Year 1920.</p>
+        <p><input type="radio" name="question1" value="Year 1812.">Year 1812.</p>
+    </div>
+
+    <div class="text-box">
+        <p id="p-1">Q.2 What is the name of the biggest technology company in South Korea?</p>
+        <p><input type="radio" name="question2" value="Samsung">Samsung</p>
+        <p><input type="radio" name="question2" value="LG">LG</p>
+        <p><input type="radio" name="question2" value="Hitachi">Hitachi</p>
+        <p><input type="radio" name="question2" value="Apple">Apple</p>
+</div>
+
+<div class="text-box">
+    <p id="p-1">Q.3  What is the world’s smallest bird?</p>
+    <p><input type="radio" name="question3" value="Sparrow">Sparrow.</p>
+    <p><input type="radio" name="question3" value="Dove">Dove.</p>
+    <p><input type="radio" name="question3" value="Allen's Hummingbird">Allen’s Hummingbird.</p>
+    <p><input type="radio" name="question3" value="Bee Hummingbird">Bee Hummingbird.</p>
+</div>
+
+<div class="text-box">
+    <p id="p-1">Q.4  What is the lifespan of a dragonfly?</p>
+    <p><input type="radio" name="question4" value="24 Hours">24 Hours.</p>
+    <p><input type="radio" name="question4" value="1 Month">1 Month.</p>
+    <p><input type="radio" name="question4" value="3 Years">3 Years.</p>
+    <p><input type="radio" name="question4" value="36 Hours">36 Hours</p>
+</div>
+
+<div class="text-box">
+    <p id="p-1">Q.5 How many hearts does an Octopus Have?</p>
+    <p><input type="radio" name="question5" value="2">2</p>
+    <p><input type="radio" name="question5" value="8">8</p>
+    <p><input type="radio" name="question5" value="1">1</p>
+    <p><input type="radio" name="question5" value="3">3</p>
+</div>
+    <input type="button" name="" value="DONE" onclick="submit_quiz();" id="btn-1">
+    <div class="ans-box" id="box2"></div>
+    </form>
+    
+
+    </div>
+
+    <script type="text/javascript">
+    function submit_quiz(){
+        var a = 0;
+        var q1 = document.MCQ.question1.value;
+        var q2 = document.MCQ.question2.value;
+        var q3 = document.MCQ.question3.value;
+        var q4 = document.MCQ.question4.value;
+        var q5 = document.MCQ.question5.value;
+        if(q1=="Year 1912."){a++}
+        if(q2=="Samsung"){a++}
+        if(q3=="Allen's Hummingbird"){a++}
+        if(q4=="24 Hours"){a++}
+        if(q5=="3"){a++}
+        document.getElementById('box2').innerHTML = "All"+a+ "answers are correct";
+        
+        if(q1!=="Year 1912."){{a++};
+             document.getElementById('box2').innerHTML = "Only "+a+ " answers are correct";
+         }
+    }
+
+
+    </script>
+    
+</body>
+</html>
